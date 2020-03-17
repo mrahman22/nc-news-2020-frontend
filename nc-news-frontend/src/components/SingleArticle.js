@@ -15,7 +15,6 @@ class SingleArticle extends Component {
 
   render() {
     const { selectedArticle } = this.state;
-    console.log(selectedArticle);
     if (this.state.isLoading) return "....Loading";
     return (
       <div>

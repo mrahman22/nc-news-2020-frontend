@@ -10,4 +10,6 @@ export const fetchArticlesById = article_id => {
   );
 };
 
-//export default fetchArticles;
+export const fetchTopics = () => {
+  return axios.get("https://nc2020server.herokuapp.com/api/topics");
+};
