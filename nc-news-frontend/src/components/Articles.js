@@ -27,7 +27,12 @@ class Articles extends React.Component {
                 <Link to={`/articles/${article.article_id}`}>
                   <h5>{article.title}</h5>
                 </Link>
-                <p>{article.author}</p>
+                <span>
+                  <Link to={`/users/${article.author}`}>
+                    <button>{article.author}</button>
+                  </Link>
+                </span>
+
                 <p>{article.topic}</p>
                 <p>{article.created_at}</p>
                 <p>{article.votes}</p>

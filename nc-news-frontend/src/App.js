@@ -7,6 +7,7 @@ import Topics from "./components/Topics";
 import Header from "./components/Header";
 import Articles from "./components/Articles";
 import SingleArticle from "./components/SingleArticle";
+import GetSingleUser from "./components/GetSingleUser";
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
         <Articles path="/articles" />
         <SingleArticle path="articles/:article_id" />
         <Topics path="/topics" />
+        <GetSingleUser path="/users/:username" />
       </Router>
     </div>
   );

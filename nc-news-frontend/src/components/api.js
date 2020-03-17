@@ -13,3 +13,7 @@ export const fetchArticlesById = article_id => {
 export const fetchTopics = () => {
   return axios.get("https://nc2020server.herokuapp.com/api/topics");
 };
+
+export const fetchUser = username => {
+  return axios.get(`https://nc2020server.herokuapp.com/api/users/${username}`);
+};
