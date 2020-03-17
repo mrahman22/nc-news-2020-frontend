@@ -1,5 +1,6 @@
 import React from "react";
-import fetchArticles from "./fetchArticles";
+import { fetchArticles } from "./api";
+import { Link } from "@reach/router";
 
 class Articles extends React.Component {
   state = {
@@ -23,7 +24,9 @@ class Articles extends React.Component {
           {this.state.articles.map(article => {
             return (
               <li key={article.article_id}>
-                <h5>{article.title}</h5>
+                <Link to={`/articles/${article.article_id}`}>
+                  <h5>{article.title}</h5>
+                </Link>
                 <p>{article.author}</p>
                 <p>{article.topic}</p>
                 <p>{article.created_at}</p>
