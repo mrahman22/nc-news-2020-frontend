@@ -33,10 +33,12 @@ class Articles extends React.Component {
                   </Link>
                 </span>
 
-                <p>{article.topic}</p>
-                <p>{article.created_at}</p>
-                <p>{article.votes}</p>
-                <p>{article.comment_count}</p>
+                <p>Topic: {article.topic}</p>
+                <p>Created_at: {article.created_at}</p>
+                <p>Votes: {article.votes}</p>
+                <Link to={`${article.article_id}/comments`}>
+                  <p>Comment_Count: {article.comment_count}</p>
+                </Link>
                 <hr />
               </li>
             );

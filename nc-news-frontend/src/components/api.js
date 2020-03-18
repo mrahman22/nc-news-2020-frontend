@@ -17,3 +17,9 @@ export const fetchTopics = () => {
 export const fetchUser = username => {
   return axios.get(`https://nc2020server.herokuapp.com/api/users/${username}`);
 };
+
+export const fetchArticleByComments = article_id => {
+  return axios.get(
+    `https://nc2020server.herokuapp.com/api/articles/${article_id}/comments`
+  );
+};
