@@ -23,3 +23,7 @@ export const fetchArticleByComments = article_id => {
     `https://nc2020server.herokuapp.com/api/articles/${article_id}/comments`
   );
 };
+
+// export const sortUserByVotes = (votes) => {
+
+// }

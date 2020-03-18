@@ -15,15 +15,36 @@ class Comments extends Component {
     });
   }
 
+  handleSort = value => {
+    this.setState(currentState => {
+      return {
+        comments: currentState.comments.sort(function(a, b) {
+          if (value === "author") {
+            if (a[value] < b[value]) {
+              return -1;
+            }
+            if (a[value] > b[value]) {
+              return 1;
+            }
+            return 0;
+          }
+          if (value === "votes") {
+            return a[value] - b[value];
+          }
+          return 0;
+        })
+      };
+    });
+  };
+
   render() {
     const { comments, isLoading } = this.state;
-    console.log(comments);
 
     if (isLoading) return "...Loading";
     return (
       <div>
         <br />
-        <SortComments />
+        <SortComments handleSort={this.handleSort} />
         <ul>
           {comments.map(comment => {
             return (
