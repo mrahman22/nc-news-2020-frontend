@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { fetchArticleByComments } from "./api";
+import SortComments from "./SortComments";
 
 class Comments extends Component {
   state = {
@@ -21,6 +22,8 @@ class Comments extends Component {
     if (isLoading) return "...Loading";
     return (
       <div>
+        <br />
+        <SortComments />
         <ul>
           {comments.map(comment => {
             return (
