@@ -1,39 +1,33 @@
 import React, { Component } from "react";
-import { fetchArticleByComments } from "./api";
+import { fetchArticleByComments, sortUserByQuery } from "./api";
 import SortComments from "./SortComments";
 
 class Comments extends Component {
   state = {
     comments: {},
-    isLoading: true
+    isLoading: true,
+    sort: "author"
   };
 
   componentDidMount() {
     const article_id = this.props.article_id;
     fetchArticleByComments(article_id).then(({ data }) => {
-      this.setState({ comments: data.comments, isLoading: false });
+      this.setState({
+        comments: data.comments,
+        isLoading: false,
+        sort: "author"
+      });
     });
   }
 
   handleSort = value => {
-    this.setState(currentState => {
-      return {
-        comments: currentState.comments.sort(function(a, b) {
-          if (value === "author") {
-            if (a[value] < b[value]) {
-              return -1;
-            }
-            if (a[value] > b[value]) {
-              return 1;
-            }
-            return 0;
-          }
-          if (value === "votes") {
-            return a[value] - b[value];
-          }
-          return 0;
-        })
-      };
+    const article_id = this.props.article_id;
+    sortUserByQuery(article_id, value).then(({ data }) => {
+      this.setState({
+        comments: data.comments,
+        isLoading: false,
+        sort: "author"
+      });
     });
   };
 
@@ -44,7 +38,10 @@ class Comments extends Component {
     return (
       <div>
         <br />
-        <SortComments handleSort={this.handleSort} />
+        <SortComments
+          handleSort={this.handleSort}
+          article_id={this.props.article_id}
+        />
         <ul>
           {comments.map(comment => {
             return (

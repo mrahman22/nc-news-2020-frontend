@@ -7,10 +7,9 @@ class SortComments extends Component {
         sortBy:
         <select
           onChange={e => {
-            this.props.handleSort(e.target.value);
+            this.props.handleSort(e.target.value, this.props.article_id);
           }}
         >
-          <option>Select</option>
           <option value="author">author</option>
           <option value="votes">votes</option>
         </select>
