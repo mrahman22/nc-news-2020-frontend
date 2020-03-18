@@ -47,7 +47,6 @@ class Comments extends Component {
   }
 
   render() {
-    console.log(this.state);
     const { comments, isLoading } = this.state;
 
     if (isLoading) return "...Loading";
