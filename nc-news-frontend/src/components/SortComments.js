@@ -10,6 +10,7 @@ class SortComments extends Component {
             this.props.handleSort(e.target.value, this.props.article_id);
           }}
         >
+          <option value="select">select</option>
           <option value="author">author</option>
           <option value="votes">votes</option>
         </select>

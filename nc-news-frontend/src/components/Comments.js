@@ -6,7 +6,7 @@ class Comments extends Component {
   state = {
     comments: {},
     isLoading: true,
-    sort: "author"
+    sort: ""
   };
 
   componentDidMount() {
@@ -15,7 +15,7 @@ class Comments extends Component {
       this.setState({
         comments: data.comments,
         isLoading: false,
-        sort: "author"
+        sort: ""
       });
     });
   }
@@ -26,22 +26,35 @@ class Comments extends Component {
       this.setState({
         comments: data.comments,
         isLoading: false,
-        sort: "author"
+        sort: value
       });
     });
   };
 
+  componentDidUpdate(prevProp, prevState) {
+    if (prevState.sort !== this.state.sort) {
+      const article_id = this.props.article_id;
+      this.handleSort = value => {
+        sortUserByQuery(article_id, value).then(({ data }) => {
+          this.setState({
+            comments: data.comments,
+            isLoading: false,
+            sort: value
+          });
+        });
+      };
+    }
+  }
+
   render() {
+    console.log(this.state);
     const { comments, isLoading } = this.state;
 
     if (isLoading) return "...Loading";
     return (
       <div>
         <br />
-        <SortComments
-          handleSort={this.handleSort}
-          article_id={this.props.article_id}
-        />
+        <SortComments handleSort={this.handleSort} />
         <ul>
           {comments.map(comment => {
             return (
