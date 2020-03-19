@@ -34,3 +34,10 @@ export const sortUserByQuery = (article_id, value) => {
     }
   );
 };
+
+export const patchCommentVotes = (article_id, inc_votes) => {
+  return axios.patch(
+    `https://nc2020server.herokuapp.com/api/articles/${article_id}`,
+    { inc_votes }
+  );
+};
