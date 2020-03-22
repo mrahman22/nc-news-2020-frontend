@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import { fetchArticleByComments, sortUserByQuery, postNewComment } from "./api";
+import {
+  fetchArticleByComments,
+  sortUserByQuery,
+  postNewComment,
+  DeleteCommment
+} from "./api";
 import SortComments from "./SortComments";
 import PostNewCommForm from "./PostNewCommForm";
 
@@ -75,6 +80,17 @@ class Comments extends Component {
     });
   };
 
+  handleDelete = comment_id => {
+    DeleteCommment(comment_id);
+    this.setState(currentState => {
+      return {
+        comments: currentState.comments.filter(
+          comment => comment.comment_id !== comment_id
+        )
+      };
+    });
+  };
+
   render() {
     const { comments, isLoading } = this.state;
 
@@ -96,6 +112,9 @@ class Comments extends Component {
                 <p>created_at: {comment.created_at}</p>
                 <p>body: {comment.body}</p>
                 <p>votes: {comment.votes}</p>
+                <button onClick={e => this.handleDelete(comment.comment_id)}>
+                  Delete Comment
+                </button>
                 <hr />
               </li>
             );

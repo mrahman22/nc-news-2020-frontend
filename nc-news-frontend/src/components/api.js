@@ -48,3 +48,9 @@ export const postNewComment = (article_id, comment) => {
     comment
   );
 };
+
+export const DeleteCommment = comment_id => {
+  return axios.delete(
+    `https://nc2020server.herokuapp.com/api/comments/${comment_id}`
+  );
+};
