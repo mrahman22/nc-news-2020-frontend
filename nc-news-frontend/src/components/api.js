@@ -41,3 +41,10 @@ export const patchCommentVotes = (article_id, inc_votes) => {
     { inc_votes }
   );
 };
+
+export const postNewComment = (article_id, comment) => {
+  return axios.post(
+    `https://nc2020server.herokuapp.com/api/articles/${article_id}/comments`,
+    comment
+  );
+};

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { fetchArticlesById } from "./api";
 import { patchCommentVotes } from "./api";
-//import Voter from "./Voter";
 
 class SingleArticle extends Component {
   state = {
