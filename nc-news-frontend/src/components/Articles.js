@@ -1,17 +1,36 @@
 import React from "react";
 import { fetchArticles } from "./api";
 import { Link } from "@reach/router";
+import SortArticles from "./SortArticles";
 
 class Articles extends React.Component {
   state = {
     articles: {},
-    isLoading: true
+    isLoading: true,
+    sort: ""
   };
 
   componentDidMount() {
     fetchArticles().then(({ data }) => {
-      this.setState({ articles: data.articles, isLoading: false });
+      this.setState({ articles: data.articles, isLoading: false, sort: "" });
     });
+  }
+
+  handleSort = value => {
+    this.setState({ sort: value });
+  };
+
+  componentDidUpdate(prevProp, prevState) {
+    const value = this.state.sort;
+    if (prevState.sort !== this.state.sort) {
+      fetchArticles(value).then(({ data }) => {
+        this.setState({
+          articles: data.articles,
+          isLoading: false,
+          sort: value
+        });
+      });
+    }
   }
 
   render() {
@@ -19,7 +38,8 @@ class Articles extends React.Component {
 
     return (
       <div>
-        <h1>Articles</h1>
+        <h1 className="articles-header">Articles</h1>
+        <SortArticles handleSort={this.handleSort} />
         <ul>
           {this.state.articles.map(article => {
             return (

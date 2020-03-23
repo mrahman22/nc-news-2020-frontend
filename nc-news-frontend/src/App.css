@@ -5,7 +5,7 @@
 
 li {
   list-style-type: none;
-  line-height: 1em;
+  line-height: 2em;
 }
 
 .main-header {
@@ -37,7 +37,8 @@ li {
 }
 
 .showcase {
-  height: 100vh;
+  height: 70vh;
+  width: 98.4vw;
 }
 
 .btn {
@@ -65,4 +66,13 @@ li {
   margin-top: -3px;
   color: white;
   background: #737373;
+}
+
+.articles-header {
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+.sorter {
+  text-align: center;
+  margin-bottom: 30px;
 }
