@@ -31,17 +31,16 @@ class Comments extends Component {
   };
 
   componentDidUpdate(prevProp, prevState) {
+    const value = this.state.sort;
     if (prevState.sort !== this.state.sort) {
       const article_id = this.props.article_id;
-      this.handleSort = value => {
-        sortUserByQuery(article_id, value).then(({ data }) => {
-          this.setState({
-            comments: data.comments,
-            isLoading: false,
-            sort: value
-          });
+      sortUserByQuery(article_id, value).then(({ data }) => {
+        this.setState({
+          comments: data.comments,
+          isLoading: false,
+          sort: value
         });
-      };
+      });
     }
   }
 
