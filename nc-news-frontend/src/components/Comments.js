@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {
   fetchArticleByComments,
-  sortUserByQuery,
+  //sortUserByQuery,
   postNewComment,
   DeleteCommment
 } from "./api";
@@ -34,7 +34,7 @@ class Comments extends Component {
     const value = this.state.sort;
     const article_id = this.props.article_id;
     if (prevState.sort !== this.state.sort) {
-      sortUserByQuery(article_id, value).then(({ data }) => {
+      fetchArticleByComments(article_id, value).then(({ data }) => {
         this.setState({
           comments: data.comments,
           isLoading: false,

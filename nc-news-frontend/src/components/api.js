@@ -18,11 +18,7 @@ export const fetchUser = username => {
   return axios.get(`${baseUrl}/api/users/${username}`);
 };
 
-export const fetchArticleByComments = article_id => {
-  return axios.get(`${baseUrl}/api/articles/${article_id}/comments`);
-};
-
-export const sortUserByQuery = (article_id, value) => {
+export const fetchArticleByComments = (article_id, value) => {
   return axios.get(`${baseUrl}/api/articles/${article_id}/comments`, {
     params: {
       sort_by: value
