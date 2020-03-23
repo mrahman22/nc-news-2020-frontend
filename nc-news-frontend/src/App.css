@@ -23,7 +23,7 @@ li {
   padding: 10px;
   grid-template-columns: repeat(1);
   border: 1px solid black;
-  background-color: #ddd;
+  background-color: lightgrey;
   border-radius: 2%;
 }
 
@@ -56,4 +56,13 @@ li {
 
 .single {
   font-family: "Gloria Hallelujah", cursive;
+}
+
+.footer {
+  font-family: "Gloria Hallelujah", cursive;
+  text-align: center;
+  padding: 40px;
+  margin-top: -3px;
+  color: white;
+  background: #737373;
 }
