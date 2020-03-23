@@ -27,14 +27,9 @@ class Comments extends Component {
   }
 
   handleSort = value => {
-    const article_id = this.props.article_id;
-    sortUserByQuery(article_id, value).then(({ data }) => {
-      this.setState({
-        comments: data.comments,
-        isLoading: false
-      });
-    });
+    this.setState({ sort: value });
   };
+
   componentDidUpdate(prevProp, prevState) {
     if (prevState.sort !== this.state.sort) {
       const article_id = this.props.article_id;
