@@ -3,7 +3,7 @@ import React from "react";
 const Home = () => {
   return (
     <div>
-      <p>Welcome to NC News</p>
+      <img className="showcase" src={require("./news.jpg")} alt="news" />
     </div>
   );
 };

@@ -3,35 +3,57 @@
   padding: 0;
 }
 
-.App {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
-
 li {
   list-style-type: none;
+  line-height: 1em;
 }
 
 .main-header {
-  font-style: italic;
+  font-family: "Gloria Hallelujah", cursive;
+  word-spacing: 20px;
   font-weight: 400;
   padding: 30px;
   margin: 0;
   color: white;
-  background: black;
+  background: #737373;
 }
 
-.btn {
-  padding: 5px;
-  height: 25px;
-  width: 70px;
-  margin-top: 10px;
-  margin-left: 2px;
+.articles {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(1);
+  border: 1px solid black;
+  background-color: #ddd;
+  border-radius: 2%;
+}
+
+.navbar {
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  margin-left: 100px;
 }
 
 .showcase {
-  min-height: 400px;
-  background: no-repeat 0 -400px;
-  text-align: center;
+  height: 100vh;
+}
+
+.btn {
+  font-family: "Gloria Hallelujah", cursive;
+  padding: 5px;
+  margin: 40px;
+  background: none;
+  color: white;
+  width: 100px;
+  border-radius: 15%;
+}
+
+li {
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+.single {
+  font-family: "Gloria Hallelujah", cursive;
 }

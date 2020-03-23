@@ -31,7 +31,7 @@ class SingleArticle extends Component {
     const { selectedArticle } = this.state;
     if (this.state.isLoading) return "....Loading";
     return (
-      <div>
+      <div className="single">
         <h2>Title: {selectedArticle.title}</h2>
         <p>Author: {selectedArticle.author}</p>
         <p>Topic: {selectedArticle.topic}</p>

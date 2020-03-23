@@ -23,7 +23,7 @@ class Articles extends React.Component {
         <ul>
           {this.state.articles.map(article => {
             return (
-              <li key={article.article_id}>
+              <li className="articles" key={article.article_id}>
                 <Link to={`/articles/${article.article_id}`}>
                   <h5>{article.title}</h5>
                 </Link>
@@ -39,7 +39,6 @@ class Articles extends React.Component {
                 <Link to={`${article.article_id}/comments`}>
                   <p>Comment_Count: {article.comment_count}</p>
                 </Link>
-                <hr />
               </li>
             );
           })}

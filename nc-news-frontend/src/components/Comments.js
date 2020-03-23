@@ -27,24 +27,6 @@ class Comments extends Component {
   }
 
   handleSort = value => {
-    // this should... if value is votes:
-
-    /*
-     Something thats changing -> like the value
-     In turn you want that do change something else
-
-     Direct Effect -> choosing that option (value)
-     Indirect Effect -> rerender with.... comments sorted
-    
-
-     Handlesort is just going to deal with the choosing of the option -> 
-        put the value in state
-
-
-      When do we use CDU?
-        if newstate/props (something has change) -> action that change by making your request
-    */
-
     const article_id = this.props.article_id;
     sortUserByQuery(article_id, value).then(({ data }) => {
       this.setState({
@@ -53,9 +35,6 @@ class Comments extends Component {
       });
     });
   };
-  // params -> if you don't pass anything into params -> theres no query
-  // reuse your fetchArticleByComments
-
   componentDidUpdate(prevProp, prevState) {
     if (prevState.sort !== this.state.sort) {
       const article_id = this.props.article_id;

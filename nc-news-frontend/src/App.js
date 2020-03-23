@@ -12,8 +12,10 @@ import GetSingleUser from "./components/GetSingleUser";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Nav />
+      <span>
+        <Header />
+        <Nav />
+      </span>
       <Router>
         <Home path="/" />
         <Articles path="/articles" />
