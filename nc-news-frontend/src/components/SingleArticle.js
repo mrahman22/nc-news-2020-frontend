@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { fetchArticlesById } from "./api";
 import { patchCommentVotes } from "./api";
+import { Link } from "@reach/router";
 
 class SingleArticle extends Component {
   state = {
@@ -37,7 +38,9 @@ class SingleArticle extends Component {
         <p>Topic: {selectedArticle.topic}</p>
         <p>Created_at{selectedArticle.created_at}</p>
         <p>Body: {selectedArticle.body}</p>
-        <p>Comment Count: {selectedArticle.comment_count}</p>
+        <Link to={`/articles/${selectedArticle.article_id}/comments`}>
+          <p>Comment Count: {selectedArticle.comment_count}</p>
+        </Link>
         <p>Votes: {selectedArticle.votes}</p>
         <button onClick={this.incrementVotes}>LIKE</button>
         <button onClick={this.decrementVotes}>DISLIKE</button>
