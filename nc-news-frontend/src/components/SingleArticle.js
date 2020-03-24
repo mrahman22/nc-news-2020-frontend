@@ -33,11 +33,21 @@ class SingleArticle extends Component {
     if (this.state.isLoading) return "....Loading";
     return (
       <div className="single">
-        <h2>Title: {selectedArticle.title}</h2>
-        <p>Author: {selectedArticle.author}</p>
-        <p>Topic: {selectedArticle.topic}</p>
-        <p>Created_at{selectedArticle.created_at}</p>
-        <p>Body: {selectedArticle.body}</p>
+        <h2>
+          <span className="red">Title:</span> {selectedArticle.title}
+        </h2>
+        <p>
+          <span className="red">Author:</span> {selectedArticle.author}
+        </p>
+        <p>
+          <span className="red">Topic:</span> {selectedArticle.topic}
+        </p>
+        <p>
+          <span className="red">Created_at</span> {selectedArticle.created_at}
+        </p>
+        <p>
+          <span className="red">Body:</span> {selectedArticle.body}
+        </p>
         <Link to={`/articles/${selectedArticle.article_id}/comments`}>
           <p>Comment Count: {selectedArticle.comment_count}</p>
         </Link>

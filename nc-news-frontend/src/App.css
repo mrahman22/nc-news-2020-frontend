@@ -76,3 +76,18 @@ li {
   text-align: center;
   margin-bottom: 30px;
 }
+
+.red {
+  color: red;
+}
+
+.login {
+  font-family: "Gloria Hallelujah", cursive;
+  text-align: center;
+  margin-top: 120px;
+  line-height: 1.8;
+}
+
+.green {
+  color: green;
+}

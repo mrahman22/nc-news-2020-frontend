@@ -9,6 +9,7 @@ import Comments from "./components/Comments";
 import Articles from "./components/Articles";
 import SingleArticle from "./components/SingleArticle";
 import GetSingleUser from "./components/GetSingleUser";
+import LoginForm from "./components/LoginForm";
 function App() {
   return (
     <div className="App">
@@ -23,6 +24,7 @@ function App() {
         <Topics path="/topics" />
         <GetSingleUser path="/users/:username" />
         <Comments path="/articles/:article_id/comments" />
+        <LoginForm path="/login" />
       </Router>
     </div>
   );
