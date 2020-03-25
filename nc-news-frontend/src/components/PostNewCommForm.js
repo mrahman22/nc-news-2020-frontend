@@ -17,7 +17,6 @@ class PostNewCommForm extends Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <form onSubmit={this.handleSubmit}>
         <label>username:</label>

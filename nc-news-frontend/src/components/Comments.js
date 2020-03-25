@@ -65,6 +65,7 @@ class Comments extends Component {
   };
 
   render() {
+    const loggedInUser = this.props.loggedInUser;
     const { comments, isLoading } = this.state;
 
     if (isLoading) return "...Loading";
@@ -73,7 +74,7 @@ class Comments extends Component {
         <br />
         <SortComments handleSort={this.handleSort} />
         <br />
-        <PostNewCommForm postComments={this.postComments} />
+        {loggedInUser && <PostNewCommForm postComments={this.postComments} />}
         <ul>
           {comments.map(comment => {
             return (
@@ -85,9 +86,11 @@ class Comments extends Component {
                 <p>created_at: {comment.created_at}</p>
                 <p>body: {comment.body}</p>
                 <p>votes: {comment.votes}</p>
-                <button onClick={e => this.handleDelete(comment.comment_id)}>
-                  Delete Comment
-                </button>
+                {loggedInUser && (
+                  <button onClick={e => this.handleDelete(comment.comment_id)}>
+                    Delete Comment
+                  </button>
+                )}
                 <hr />
               </li>
             );
