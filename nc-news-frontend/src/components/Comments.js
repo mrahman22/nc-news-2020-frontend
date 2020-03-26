@@ -86,7 +86,7 @@ class Comments extends Component {
                 <p>created_at: {comment.created_at}</p>
                 <p>body: {comment.body}</p>
                 <p>votes: {comment.votes}</p>
-                {loggedInUser && (
+                {loggedInUser === comment.author && (
                   <button onClick={e => this.handleDelete(comment.comment_id)}>
                     Delete Comment
                   </button>
