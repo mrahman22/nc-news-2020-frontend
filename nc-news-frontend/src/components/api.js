@@ -18,6 +18,10 @@ export const fetchTopics = () => {
   return axios.get(`${baseUrl}/api/topics`);
 };
 
+export const fetchArticlesByTopics = topic => {
+  return axios.get(`${baseUrl}/api/topics/${topic}`);
+};
+
 export const fetchUser = username => {
   return axios.get(`${baseUrl}/api/users/${username}`);
 };

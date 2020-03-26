@@ -11,6 +11,7 @@ import SingleArticle from "./components/SingleArticle";
 import GetSingleUser from "./components/GetSingleUser";
 import LoginForm from "./components/LoginForm";
 import ErrorPage from "./components/ErrorPage";
+import ArticlesByTopics from "./components/ArticlesByTopics";
 
 class App extends React.Component {
   state = {
@@ -59,6 +60,7 @@ class App extends React.Component {
             path="/articles/:article_id/comments"
             loggedInUser={this.state.loggedInUser}
           />
+          <ArticlesByTopics path="/topics/:type" />
           <ErrorPage default status={404} msg={"Page not found"} />
         </Router>
       </div>
