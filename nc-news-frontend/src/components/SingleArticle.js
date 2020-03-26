@@ -6,13 +6,22 @@ import { Link } from "@reach/router";
 class SingleArticle extends Component {
   state = {
     selectedArticle: {},
-    isLoading: true
+    isLoading: true,
+    hasError: false
   };
 
   componentDidMount() {
-    fetchArticlesById(this.props.article_id).then(({ data }) => {
-      this.setState({ selectedArticle: data.article, isLoading: false });
-    });
+    fetchArticlesById(this.props.article_id)
+      .then(({ data }) => {
+        this.setState({ selectedArticle: data.article, isLoading: false });
+      })
+      .catch(err => {
+        console.dir(err, "article err");
+        this.setState({
+          hasError: { msg: err.response.data.msg, status: err.response.status },
+          isLoading: false
+        });
+      });
   }
 
   incrementVotes = e => {
@@ -31,6 +40,7 @@ class SingleArticle extends Component {
   render() {
     const { selectedArticle } = this.state;
     if (this.state.isLoading) return "....Loading";
+    if (this.state.hasError) return <p>status: 404, msg: Id not found!</p>;
     return (
       <div className="single">
         <h2>

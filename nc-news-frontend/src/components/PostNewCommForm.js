@@ -31,6 +31,7 @@ class PostNewCommForm extends Component {
           type="text"
           id="body"
           value={this.state.body}
+          required
           onChange={e => this.handleInput(e.target.value, "body")}
         ></input>
         <button>POST</button>

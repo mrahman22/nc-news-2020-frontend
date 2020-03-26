@@ -3,13 +3,14 @@ import "./App.css";
 import { Router } from "@reach/router";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
-import Topics from "./components/Topics";
 import Header from "./components/Header";
+import Topics from "./components/Topics";
 import Comments from "./components/Comments";
 import Articles from "./components/Articles";
 import SingleArticle from "./components/SingleArticle";
 import GetSingleUser from "./components/GetSingleUser";
 import LoginForm from "./components/LoginForm";
+import ErrorPage from "./components/ErrorPage";
 
 class App extends React.Component {
   state = {
@@ -51,13 +52,14 @@ class App extends React.Component {
           />
           <Home path="/" />
           <Articles path="/articles" />
-          <SingleArticle path="articles/:article_id/" />
           <Topics path="/topics" />
+          <SingleArticle path="articles/:article_id/" />
           <GetSingleUser path="/users/:username" />
           <Comments
             path="/articles/:article_id/comments"
             loggedInUser={this.state.loggedInUser}
           />
+          <ErrorPage default status={404} msg={"Page not found"} />
         </Router>
       </div>
     );

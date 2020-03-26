@@ -7,6 +7,7 @@ class Articles extends React.Component {
   state = {
     articles: {},
     isLoading: true,
+    hasError: false,
     sort: ""
   };
 
