@@ -5,17 +5,26 @@ import { Link } from "@reach/router";
 class ArticlesByTopics extends Component {
   state = {
     articles: {},
-    isLoading: true
+    isLoading: true,
+    hasError: false
   };
 
   componentDidMount() {
     const topic = this.props.type;
-    fetchArticlesByTopics(topic).then(({ data }) => {
-      this.setState({ articles: data.articles, isLoading: false });
-    });
+    fetchArticlesByTopics(topic)
+      .then(({ data }) => {
+        this.setState({ articles: data.articles, isLoading: false });
+      })
+      .catch(err => {
+        this.setState({
+          hasError: { msg: err.response.data.msg, status: err.response.status },
+          isLoading: false
+        });
+      });
   }
   render() {
     if (this.state.isLoading) return ".....Loading";
+    if (this.state.hasError) return "Status: 404, msg: Topic does not exist";
     return (
       <div>
         <ul>

@@ -12,18 +12,27 @@ class Comments extends Component {
   state = {
     comments: {},
     isLoading: true,
-    sort: ""
+    sort: "",
+    hasError: false
   };
 
   componentDidMount() {
     const article_id = this.props.article_id;
-    fetchArticleByComments(article_id).then(({ data }) => {
-      this.setState({
-        comments: data.comments,
-        isLoading: false,
-        sort: ""
+    fetchArticleByComments(article_id)
+      .then(({ data }) => {
+        this.setState({
+          comments: data.comments,
+          isLoading: false,
+          sort: "",
+          hasError: false
+        });
+      })
+      .catch(err => {
+        this.setState({
+          hasError: { msg: err.response.data.msg, status: err.response.status },
+          isLoading: false
+        });
       });
-    });
   }
 
   handleSort = value => {
@@ -69,6 +78,8 @@ class Comments extends Component {
     const { comments, isLoading } = this.state;
 
     if (isLoading) return "...Loading";
+    if (this.state.hasError)
+      return "Status: 404, msg: article_id does not exist";
     return (
       <div>
         <br />
