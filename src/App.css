@@ -21,6 +21,9 @@ li {
 .articles {
   display: grid;
   padding: 10px;
+  margin-left: 125px;
+  margin-right: 125px;
+  margin-bottom: 10px;
   grid-template-columns: repeat(1);
   border: 1px solid black;
   background-color: lightgrey;
@@ -31,7 +34,7 @@ li {
   text-align: center;
   overflow: hidden;
   position: fixed;
-  top: 0%;
+  top: 0;
   width: 100%;
   margin-left: 100px;
 }
@@ -90,4 +93,10 @@ li {
 
 .green {
   color: green;
+}
+
+.main-articles {
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }

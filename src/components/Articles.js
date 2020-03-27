@@ -38,7 +38,7 @@ class Articles extends React.Component {
     if (this.state.isLoading) return "....loading";
 
     return (
-      <div>
+      <div className="main-articles">
         <h1 className="articles-header">Articles</h1>
         <SortArticles handleSort={this.handleSort} />
         <ul>
