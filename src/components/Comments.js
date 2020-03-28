@@ -1,10 +1,5 @@
 import React, { Component } from "react";
-import {
-  fetchArticleByComments,
-  //sortUserByQuery,
-  postNewComment,
-  DeleteCommment
-} from "./api";
+import { fetchArticleByComments, postNewComment, DeleteCommment } from "./api";
 import SortComments from "./SortComments";
 import PostNewCommForm from "./PostNewCommForm";
 
@@ -54,6 +49,8 @@ class Comments extends Component {
   }
 
   postComments = newComment => {
+    const loggedInUser = this.props.loggedInUser;
+    newComment.username = loggedInUser;
     const article_id = this.props.article_id;
     postNewComment(article_id, newComment).then(res => {
       this.setState(currentState => {

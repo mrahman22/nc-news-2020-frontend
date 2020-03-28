@@ -4,7 +4,6 @@ import { Router } from "@reach/router";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Header from "./components/Header";
-import Topics from "./components/Topics";
 import Comments from "./components/Comments";
 import Articles from "./components/Articles";
 import SingleArticle from "./components/SingleArticle";
@@ -53,7 +52,6 @@ class App extends React.Component {
           />
           <Home path="/" />
           <Articles path="/articles" />
-          <Topics path="/topics" />
           <SingleArticle path="articles/:article_id/" />
           <GetSingleUser path="/users/:username" />
           <Comments

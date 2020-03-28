@@ -5,16 +5,13 @@ const Nav = () => {
   return (
     <nav className="navbar">
       <Link to="/">
-        <button className="btn">Home</button>
+        <h5 className="btn">Home</h5>
       </Link>
       <Link to="/articles">
-        <button className="btn">Articles</button>
-      </Link>
-      <Link to="/topics">
-        <button className="btn">Topics</button>
+        <h5 className="btn">Articles</h5>
       </Link>
       <Link to="/login">
-        <button className="btn">Login</button>
+        <h5 className="btn">Login</h5>
       </Link>
     </nav>
   );

@@ -18,13 +18,14 @@ class Topics extends Component {
     if (this.state.isLoading) return "....Loading";
     return (
       <div>
-        <ul>
+        <ul className="topics-container">
           {this.state.topics.map(topic => {
             return (
-              <li key={topic.slug}>
+              <li className="topics" key={topic.slug}>
                 <Link to={`/topics/${topic.slug}`}>
-                  <h2>{topic.slug}</h2>
+                  <h2 className="topics-header">{topic.slug}</h2>
                 </Link>
+                <br />
                 <p>{topic.description}</p>
               </li>
             );

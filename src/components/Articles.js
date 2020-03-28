@@ -46,7 +46,7 @@ class Articles extends React.Component {
             return (
               <li className="articles" key={article.article_id}>
                 <Link to={`/articles/${article.article_id}`}>
-                  <h5>{article.title}</h5>
+                  <h5 className="article-title">{article.title}</h5>
                 </Link>
                 <span>
                   <Link to={`/users/${article.author}`}>
