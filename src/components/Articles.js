@@ -41,7 +41,7 @@ class Articles extends React.Component {
 
     return (
       <div className="main-articles">
-        <h1 className="articles-header">Articles</h1>
+        <h1 className="sub-header">Articles</h1>
         <SortArticles handleSort={this.handleSort} />
         <ul>
           {this.state.articles.map(article => {
@@ -57,7 +57,7 @@ class Articles extends React.Component {
                 </Link>
                 <span>
                   <Link to={`/users/${article.author}`}>
-                    <button className="art-btn">{article.author}</button>
+                    <button className="art-btn">user: {article.author}</button>
                   </Link>
                 </span>
 

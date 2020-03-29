@@ -18,8 +18,11 @@ class GetSingleUser extends Component {
     return (
       <div className="user">
         <h1>{username}</h1>
-        <p>{avatar_url}</p>
-        <p>{name}</p>
+        <ul>
+          <li>{avatar_url}</li>
+          <li>{name}</li>
+        </ul>
+        {/* <p>{avatar_url}</p> */}
       </div>
     );
   }

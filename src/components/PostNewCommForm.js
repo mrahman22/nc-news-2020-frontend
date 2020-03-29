@@ -17,16 +17,20 @@ class PostNewCommForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>post new comment</label>
+      <form className="comment-container" onSubmit={this.handleSubmit}>
         <input
-          type="text"
+          type="textarea"
           id="body"
+          className="comment"
           value={this.state.body}
           required
           onChange={e => this.handleInput(e.target.value, "body")}
         ></input>
-        <button>POST</button>
+        <br />
+        <br />
+        <label>POST NEW COMMENT</label>
+        <br />
+        <button className="comment-btn">POST</button>
       </form>
     );
   }

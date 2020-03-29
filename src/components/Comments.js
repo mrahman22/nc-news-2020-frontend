@@ -86,9 +86,9 @@ class Comments extends Component {
         <ul>
           {comments.map(comment => {
             return (
-              <li key={comment.comment_id}>
+              <li className="list-comments" key={comment.comment_id}>
                 <br />
-                <h3>username: {comment.author}</h3>
+                <h3 className="comment-title">username: {comment.author}</h3>
                 <p>comment_id: {comment.comment_id}</p>
                 <p>article_id: {comment.article_id}</p>
                 <p>created_at: {comment.created_at}</p>
@@ -96,11 +96,13 @@ class Comments extends Component {
                 <p>votes: {comment.votes}</p>
 
                 {loggedInUser === comment.author && (
-                  <button onClick={e => this.handleDelete(comment.comment_id)}>
+                  <button
+                    className="comment-btn"
+                    onClick={e => this.handleDelete(comment.comment_id)}
+                  >
                     Delete Comment
                   </button>
                 )}
-                <hr />
               </li>
             );
           })}

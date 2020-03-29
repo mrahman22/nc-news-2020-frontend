@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class SortComments extends Component {
   render() {
     return (
-      <div>
+      <div class="sort-comments">
         sortBy:
         <select
           onChange={e => {
