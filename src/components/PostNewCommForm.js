@@ -18,7 +18,7 @@ class PostNewCommForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>body:</label>
+        <label>post new comment</label>
         <input
           type="text"
           id="body"

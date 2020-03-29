@@ -3,41 +3,53 @@
   padding: 0;
 }
 
+body {
+  background-color: #d0ceba;
+}
+
 li {
   list-style-type: none;
   line-height: 2em;
-  font-family: "Merriweather", serif;
+  font-family: "Baloo Thambi 2", cursive;
 }
 
 .main-header {
-  font-family: "Gloria Hallelujah", cursive;
+  font-family: "Baloo Thambi 2", cursive;
   word-spacing: 20px;
   font-weight: 400;
   padding: 30px;
   margin: 0;
   color: white;
-  background: #bb1919;
+  background: #1f2041;
 }
 
 .articles {
   padding: 0px;
+  font-size: 1.1em;
   margin-left: 125px;
   margin-right: 125px;
   margin-bottom: 10px;
-  border: 1px solid black;
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid #1f2041;
+  background-color: #e9d2c0;
+}
+
+.topics-header {
+  background-color: #417b5a;
 }
 
 .navbar {
   display: flex;
   position: fixed;
-  flex-direction: row;
+  font-size: 1.5em;
   padding: 0;
   top: 0;
-  left: 200px;
+  left: 350px;
 }
 
 .btn {
-  font-family: "Gloria Hallelujah", cursive;
+  font-family: "Baloo Thambi 2", cursive;
   padding: 5px;
   margin: 40px;
   background: none;
@@ -46,26 +58,43 @@ li {
   border-radius: 15%;
 }
 
+.btn-unique {
+  font-family: "Baloo Thambi 2", cursive;
+  padding: 5px;
+  margin: 40px;
+  background: none;
+  color: green;
+  width: 100px;
+  border-radius: 15%;
+}
+
 .single {
-  font-family: "Gloria Hallelujah", cursive;
+  font-family: "Baloo Thambi 2", cursive;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 50px;
 }
 
 .footer {
-  font-family: "Gloria Hallelujah", cursive;
+  font-family: "Baloo Thambi 2", cursive;
   text-align: center;
-  padding: 30px;
+  padding: 40px;
   color: white;
   margin-top: 20px;
-  background: #bb1919;
+  background: #4b3f72;
 }
 
 .articles-header {
-  font-family: "Gloria Hallelujah", cursive;
+  font-family: "Baloo Thambi 2", cursive;
+  background-color: #4b3f72;
+  padding: -5px;
+  color: white;
 }
 
 .sorter {
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .red {
@@ -73,10 +102,14 @@ li {
 }
 
 .login {
-  font-family: "Gloria Hallelujah", cursive;
+  font-family: "Baloo Thambi 2", cursive;
   text-align: center;
   margin-top: 120px;
+  margin-left: 80px;
+  margin-right: 80px;
+  border-radius: 10px;
   line-height: 1.8;
+  background-color: #417b5a;
 }
 
 .green {
@@ -90,7 +123,7 @@ li {
 }
 
 .article-title {
-  background-color: #f70025;
+  background-color: #417b5a;
   padding: 15px;
   color: white;
 }
@@ -113,6 +146,54 @@ a:link {
 }
 
 .topics-header {
-  background-color: #737373;
+  background-color: #417b5a;
   color: white;
+}
+
+.art-btn {
+  padding-top: 2px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 2px;
+  background-color: #4b3f72;
+  border-color: #4b3f72;
+  color: white;
+  border-radius: 10px;
+}
+
+.user {
+  background-color: #417b5a;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.login-btn {
+  background-color: #4b3f72;
+  border-color: #4b3f72;
+  color: white;
+}
+
+.vote-btn {
+  background-color: #4b3f72;
+  border-color: #4b3f72;
+  color: white;
+  margin-right: 10px;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    align-items: center;
+    position: relative;
+    left: 0;
+    margin-left: -30px;
+    background-color: #4b3f72;
+  }
+  .btn {
+    color: white;
+  }
+  .main-header {
+    text-align: center;
+  }
 }

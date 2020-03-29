@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { fetchArticlesByTopics } from "./api";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "@reach/router";
 
 class ArticlesByTopics extends Component {
@@ -32,11 +34,17 @@ class ArticlesByTopics extends Component {
             return (
               <li className="articles" key={article.article_id}>
                 <Link to={`/articles/${article.article_id}`}>
-                  <h5>{article.title}</h5>
+                  <span>
+                    <h5 className="topics-header">
+                      {article.title}
+                      <br />
+                      <FontAwesomeIcon icon={faInfoCircle} />
+                    </h5>
+                  </span>
                 </Link>
                 <span>
                   <Link to={`/users/${article.author}`}>
-                    <button>{article.author}</button>
+                    <button className="art-btn">user: {article.author}</button>
                   </Link>
                 </span>
 

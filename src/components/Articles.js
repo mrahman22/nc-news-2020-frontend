@@ -1,6 +1,8 @@
 import React from "react";
 import { fetchArticles } from "./api";
 import { Link } from "@reach/router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import SortArticles from "./SortArticles";
 
 class Articles extends React.Component {
@@ -46,11 +48,16 @@ class Articles extends React.Component {
             return (
               <li className="articles" key={article.article_id}>
                 <Link to={`/articles/${article.article_id}`}>
-                  <h5 className="article-title">{article.title}</h5>
+                  <span>
+                    <h5 className="article-title">
+                      {article.title} <br />
+                      <FontAwesomeIcon icon={faInfoCircle} />
+                    </h5>
+                  </span>
                 </Link>
                 <span>
                   <Link to={`/users/${article.author}`}>
-                    <button>{article.author}</button>
+                    <button className="art-btn">{article.author}</button>
                   </Link>
                 </span>
 

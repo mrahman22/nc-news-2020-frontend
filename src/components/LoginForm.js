@@ -33,7 +33,9 @@ class LogInForm extends Component {
             this.handleInput("username", e.target.value);
           }}
         />
-        <button onClick={this.handleSubmit}>Log in</button>
+        <button className="login-btn" onClick={this.handleSubmit}>
+          Log in
+        </button>
         <p>Please see list of valid users below</p>
         <ul>
           <li>tickle122</li>

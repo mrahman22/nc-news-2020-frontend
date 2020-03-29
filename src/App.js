@@ -42,7 +42,7 @@ class App extends React.Component {
       <div className="App">
         <span>
           <Header />
-          <Nav />
+          <Nav loggedInUser={this.state.loggedInUser} />
         </span>
         <Router>
           <LoginForm

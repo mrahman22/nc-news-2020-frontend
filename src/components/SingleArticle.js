@@ -62,8 +62,12 @@ class SingleArticle extends Component {
           <p>Comment Count: {selectedArticle.comment_count}</p>
         </Link>
         <p>Votes: {selectedArticle.votes}</p>
-        <button onClick={this.incrementVotes}>LIKE</button>
-        <button onClick={this.decrementVotes}>DISLIKE</button>
+        <button className="vote-btn" onClick={this.incrementVotes}>
+          LIKE
+        </button>
+        <button className="vote-btn" onClick={this.decrementVotes}>
+          DISLIKE
+        </button>
       </div>
     );
   }

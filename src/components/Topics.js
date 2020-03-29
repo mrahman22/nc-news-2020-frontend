@@ -26,7 +26,7 @@ class Topics extends Component {
                   <h2 className="topics-header">{topic.slug}</h2>
                 </Link>
                 <br />
-                <p>{topic.description}</p>
+                <p className="topics-body">{topic.description}</p>
               </li>
             );
           })}

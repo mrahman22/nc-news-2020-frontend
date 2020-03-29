@@ -16,7 +16,7 @@ class GetSingleUser extends Component {
     if (this.state.isLoading) return "...loading";
     const { username, avatar_url, name } = this.state.singleUser;
     return (
-      <div>
+      <div className="user">
         <h1>{username}</h1>
         <p>{avatar_url}</p>
         <p>{name}</p>
