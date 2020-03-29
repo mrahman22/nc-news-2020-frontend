@@ -17,12 +17,9 @@ class LogInForm extends Component {
     this.setState({ username: "" });
   };
 
-  clickLogout = () => {
-    this.setState({ loggedOut: true });
-  };
-
   render() {
     const loggedInUser = this.props.loggedInUser;
+    console.log(loggedInUser);
     return (
       <div className="login">
         <p>You must be logged in to post or delete a comment</p>
@@ -50,6 +47,9 @@ class LogInForm extends Component {
         ) : (
           <p className="red">currently not logged in</p>
         )}
+        <button className="login-btn" onClick={this.props.handleLogout}>
+          Log out
+        </button>
       </div>
     );
   }

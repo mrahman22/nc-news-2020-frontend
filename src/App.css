@@ -224,6 +224,11 @@ a:link {
   text-align: center;
 }
 
+.comments-msg {
+  text-align: center;
+  font-weight: 900;
+}
+
 @media only screen and (max-width: 600px) {
   .navbar {
     align-items: center;

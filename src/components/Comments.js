@@ -83,6 +83,9 @@ class Comments extends Component {
         <SortComments handleSort={this.handleSort} />
         <br />
         {loggedInUser && <PostNewCommForm postComments={this.postComments} />}
+        <p className="comments-msg">
+          YOU MUST BE LOGGED IN TO POST OR DELETE A COMMENT
+        </p>
         <ul>
           {comments.map(comment => {
             return (

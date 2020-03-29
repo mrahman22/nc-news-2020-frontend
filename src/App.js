@@ -37,6 +37,14 @@ class App extends React.Component {
     }
   };
 
+  handleLogout = () => {
+    this.setState({
+      loggedInUser: null,
+      validUser: false,
+      isLoggedin: false
+    });
+  };
+
   render() {
     return (
       <div className="App">
@@ -48,6 +56,7 @@ class App extends React.Component {
           <LoginForm
             path="/login"
             handleLogin={this.handleLogin}
+            handleLogout={this.handleLogout}
             loggedInUser={this.state.loggedInUser}
           />
           <Home path="/" />
