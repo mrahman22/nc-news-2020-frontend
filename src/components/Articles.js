@@ -43,7 +43,7 @@ class Articles extends React.Component {
       <div className="main-articles">
         <h1 className="sub-header">Articles</h1>
         <SortArticles handleSort={this.handleSort} />
-        <ul>
+        <ul className="main-art">
           {this.state.articles.map(article => {
             return (
               <li className="articles" key={article.article_id}>
