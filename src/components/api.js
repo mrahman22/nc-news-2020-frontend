@@ -10,6 +10,15 @@ export const fetchArticles = value => {
   });
 };
 
+export const fetchArticlesByOrder = value => {
+  //console.log(value);
+  return axios.get(`${baseUrl}/api/articles`, {
+    params: {
+      order: value
+    }
+  });
+};
+
 export const fetchArticlesById = article_id => {
   return axios.get(`${baseUrl}/api/articles/${article_id}`);
 };

@@ -291,7 +291,7 @@ a:link {
   }
 } */
 
-@media only screen and (max-device-width: 576px) {
+@media screen and (max-device-width: 480px) {
   .navbar {
     align-items: center;
     position: relative;
@@ -304,7 +304,6 @@ a:link {
   .btn {
     color: white;
     text-align: center;
-    margin-left: 40px;
   }
   .main-header {
     text-align: center;

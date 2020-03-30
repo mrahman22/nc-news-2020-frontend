@@ -1,16 +1,18 @@
 import React from "react";
-import { fetchArticles } from "./api";
+import { fetchArticles, fetchArticlesByOrder } from "./api";
 import { Link } from "@reach/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import SortArticles from "./SortArticles";
+import OrderByComponent from "./OrderByComponent";
 
 class Articles extends React.Component {
   state = {
     articles: {},
     isLoading: true,
     hasError: false,
-    sort: ""
+    sort: "",
+    order: ""
   };
 
   componentDidMount() {
@@ -21,6 +23,17 @@ class Articles extends React.Component {
 
   handleSort = value => {
     this.setState({ sort: value });
+  };
+
+  handleOrder = value => {
+    fetchArticlesByOrder(value).then(({ data }) => {
+      this.setState({
+        articles: data.articles,
+        isLoading: false,
+        sort: this.state.sort,
+        order: value
+      });
+    });
   };
 
   componentDidUpdate(prevProp, prevState) {
@@ -43,6 +56,7 @@ class Articles extends React.Component {
       <div className="main-articles">
         <h1 className="sub-header">Articles</h1>
         <SortArticles handleSort={this.handleSort} />
+        <OrderByComponent handleOrder={this.handleOrder} />
         <ul className="main-art">
           {this.state.articles.map(article => {
             return (
