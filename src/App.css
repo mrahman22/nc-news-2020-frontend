@@ -268,7 +268,7 @@ a:link {
   font-weight: 900;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .navbar {
     align-items: center;
     position: relative;
@@ -289,26 +289,26 @@ a:link {
     font-size: 1.8vh;
     font-weight: bolder;
   }
-}
+} */
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-device-width: 576px) {
   .navbar {
     align-items: center;
     position: relative;
-    margin-left: 0.02em;
     left: 0;
-    width: 540px;
+    width: 100%vw;
+    height: 100%vh;
     background-color: #417b5a;
   }
 
   .btn {
     color: white;
     text-align: center;
-    margin-left: 30px;
+    margin-left: 40px;
   }
   .main-header {
     text-align: center;
-    width: 480px;
+    width: 100%vw;
   }
   .user {
     text-align: center;
@@ -319,7 +319,7 @@ a:link {
     text-align: center;
     margin-top: 2em;
     height: 100%;
-    width: 55%;
+    width: 36%;
     border: 1px solid black;
   }
   .footer {
@@ -327,7 +327,7 @@ a:link {
     text-align: center;
     padding: 40px;
     color: white;
-    width: 128%;
+    width: 100%vw;
     margin-top: 140px;
     background: #4b3f72;
   }
