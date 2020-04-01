@@ -21,9 +21,6 @@ const Nav = props => {
           <h5 className="btn">Login</h5>
         </Link>
       )}
-      {/* <Link to="/login">
-        <h5 className="btn">Login</h5>
-      </Link> */}
     </nav>
   );
 };

@@ -268,7 +268,7 @@ a:link {
   font-weight: 900;
 }
 
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .navbar {
     align-items: center;
     position: relative;
@@ -289,15 +289,18 @@ a:link {
     font-size: 1.8vh;
     font-weight: bolder;
   }
-} */
+}
 
 @media screen and (max-device-width: 410px) {
   .navbar {
-    align-items: center;
-    position: relative;
-    left: 0;
-    width: 23.7em;
     background-color: #417b5a;
+    width: 24.9em;
+  }
+
+  .navbar h5 {
+    width: 100%vw;
+    text-align: center;
+    margin-left: 50px;
   }
 
   .btn {
@@ -317,9 +320,14 @@ a:link {
     text-align: center;
     margin-top: 2em;
     height: 100%;
-    width: 50%;
+    width: 80%;
     border: 1px solid black;
   }
+  .topics-container {
+    margin-right: 35px;
+    margin-top: 100px;
+  }
+
   .footer {
     font-family: "Baloo Thambi 2", cursive;
     text-align: center;
@@ -327,21 +335,19 @@ a:link {
     color: white;
     width: 30.5em;
     height: 100%vh;
-    margin-top: 140px;
+    margin-top: 228px;
     background: #4b3f72;
   }
   .sub-header {
     font-family: "Baloo Thambi 2", cursive;
     background-color: #4b3f72;
-    width: 140%;
+    width: 17.75em;
     color: white;
   }
   .articles {
     padding: 0px;
     font-size: 1.1em;
-    margin-left: 125px;
-    margin-right: 100px;
-    width: 80%;
+    width: 105%;
     margin-bottom: 10px;
     margin-top: 20px;
     text-align: center;
@@ -349,7 +355,7 @@ a:link {
     background-color: #e9d2c0;
   }
   .sorter {
-    margin-left: 170px;
+    margin-left: 230px;
     margin-top: 20px;
   }
   .login {
