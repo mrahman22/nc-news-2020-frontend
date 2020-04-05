@@ -291,10 +291,10 @@ a:link {
   }
 }
 
-@media screen and (max-device-width: 410px) {
+@media screen and (max-device-width: 450px) {
   .navbar {
     background-color: #417b5a;
-    width: 24.9em;
+    width: 100vw;
   }
 
   .navbar h5 {

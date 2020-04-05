@@ -6,7 +6,7 @@ class SortArticles extends Component {
       <div className="sorter">
         sortBy:
         <select
-          onChange={e => {
+          onChange={(e) => {
             this.props.handleSort(e.target.value);
           }}
         >

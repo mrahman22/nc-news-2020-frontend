@@ -17,7 +17,7 @@ class Topics extends Component {
   render() {
     if (this.state.isLoading) return "....Loading";
     return (
-      <div>
+      <div className="main-topic-container">
         <ul className="topics-container">
           {this.state.topics.map(topic => {
             return (

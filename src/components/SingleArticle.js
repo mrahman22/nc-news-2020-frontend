@@ -7,7 +7,7 @@ class SingleArticle extends Component {
   state = {
     selectedArticle: {},
     isLoading: true,
-    hasError: false
+    hasError: false,
   };
 
   componentDidMount() {
@@ -15,22 +15,22 @@ class SingleArticle extends Component {
       .then(({ data }) => {
         this.setState({ selectedArticle: data.article, isLoading: false });
       })
-      .catch(err => {
+      .catch((err) => {
         console.dir(err, "article err");
         this.setState({
           hasError: { msg: err.response.data.msg, status: err.response.status },
-          isLoading: false
+          isLoading: false,
         });
       });
   }
 
-  incrementVotes = e => {
+  incrementVotes = (e) => {
     const article_id = this.props.article_id;
     patchCommentVotes(article_id, 1).then(({ data }) => {
       this.setState({ selectedArticle: data.article, isLoading: false });
     });
   };
-  decrementVotes = e => {
+  decrementVotes = (e) => {
     const article_id = this.props.article_id;
     patchCommentVotes(article_id, -1).then(({ data }) => {
       this.setState({ selectedArticle: data.article, isLoading: false });

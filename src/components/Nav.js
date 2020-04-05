@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 
-const Nav = props => {
+const Nav = (props) => {
   console.log(props.loggedInUser);
 
   return (

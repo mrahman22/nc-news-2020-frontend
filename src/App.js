@@ -20,19 +20,19 @@ class App extends React.Component {
       "weegembump",
       "cooljmessy",
       "grumpy19",
-      "happyamy2016"
+      "happyamy2016",
     ],
     loggedInUser: null,
     validUser: false,
-    isLoggedin: false
+    isLoggedin: false,
   };
 
-  handleLogin = username => {
+  handleLogin = (username) => {
     if (this.state.users.includes(username)) {
       this.setState({
         loggedInUser: username,
         validUser: true,
-        isLoggedin: true
+        isLoggedin: true,
       });
     }
   };
@@ -41,7 +41,7 @@ class App extends React.Component {
     this.setState({
       loggedInUser: null,
       validUser: false,
-      isLoggedin: false
+      isLoggedin: false,
     });
   };
 
