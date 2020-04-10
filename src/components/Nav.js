@@ -2,25 +2,25 @@ import React from "react";
 import { Link } from "@reach/router";
 
 const Nav = (props) => {
-  console.log(props.loggedInUser);
-
   return (
-    <nav className="navbar">
-      <Link to="/">
-        <h5 className="btn">Home</h5>
-      </Link>
-      <Link to="/articles">
-        <h5 className="btn">Articles</h5>
-      </Link>
-      {props.loggedInUser !== null ? (
-        <Link to="/login">
-          <h5 className="btn-unique">{props.loggedInUser}</h5>
+    <nav className="sidebar">
+      <ul>
+        <Link to="/">
+          <li className="btn">Home</li>
         </Link>
-      ) : (
-        <Link to="/login">
-          <h5 className="btn">Login</h5>
+        <Link to="/articles">
+          <li className="btn">Articles</li>
         </Link>
-      )}
+        {props.loggedInUser !== null ? (
+          <Link to="/login">
+            <li className="btn-unique">{props.loggedInUser}</li>
+          </Link>
+        ) : (
+          <Link to="/login">
+            <li className="btn">Login</li>
+          </Link>
+        )}
+      </ul>
     </nav>
   );
 };

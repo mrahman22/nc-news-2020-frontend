@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <Topics path="/topics" />
-      <footer className="footer">
+      {/* <footer className="footer">
         <p>Website created_by: Mustabur Rahman</p>
         <p>
           Contact information:{" "}
@@ -13,7 +13,7 @@ const Home = () => {
             mustaburrahman2017@hotmail.com
           </a>
         </p>
-      </footer>
+      </footer> */}
     </div>
   );
 };

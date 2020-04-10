@@ -1,373 +1,69 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: #d0ceba;
-}
-
-li {
-  list-style-type: none;
-  line-height: 2em;
-  font-family: "Baloo Thambi 2", cursive;
-}
-
-.main-header {
-  font-family: "Baloo Thambi 2", cursive;
-  word-spacing: 30px;
-  letter-spacing: 2px;
-  font-weight: 900;
-  font-size: 2.5em;
-  padding: 30px;
-  margin: 0;
-  color: white;
-  background: #1f2041;
-}
-
-.articles {
-  padding: 0px;
-  font-size: 1.1em;
-  margin-left: 125px;
-  margin-right: 125px;
-  margin-bottom: 10px;
-  margin-top: 20px;
+.App {
   text-align: center;
-  border: 1px solid #1f2041;
-  background-color: #e9d2c0;
 }
 
-.topics-header {
-  background-color: #417b5a;
-}
+/*=============== Header =========================*/
 
-.topics-header:hover {
-  color: yellow;
-}
-
-.navbar {
-  display: flex;
-  position: fixed;
-  font-size: 1.5em;
-  padding: 0;
-  top: 0;
-  left: 350px;
-}
-
-.btn {
-  font-family: "Baloo Thambi 2", cursive;
-  padding: 5px;
-  margin: 40px;
-  background: none;
-  color: white;
-  width: 100px;
-  border-radius: 15%;
-}
-
-.btn:hover {
-  color: yellow;
-}
-
-.btn-unique {
-  font-family: "Baloo Thambi 2", cursive;
-  padding: 5px;
-  margin: 40px;
-  background: none;
-  color: green;
-  width: 100px;
-  border-radius: 15%;
-}
-
-.single {
-  font-family: "Baloo Thambi 2", cursive;
-  text-align: center;
-  font-size: 1em;
-  margin-top: 50px;
-}
-
-.footer {
-  font-family: "Baloo Thambi 2", cursive;
-  text-align: center;
-  padding: 40px;
-  color: white;
-  margin-top: 20px;
-  background: #4b3f72;
-}
-
-.sub-header {
-  font-family: "Baloo Thambi 2", cursive;
-  background-color: #4b3f72;
-  padding: -5px;
+header {
+  background-color: #13505b;
   color: white;
 }
 
-.sorter {
-  text-align: center;
-  margin-bottom: 30px;
-  margin-top: 10px;
-}
+/*=============== Header =========================*/
 
-.red {
-  color: red;
-}
+/*=============== Navbar =========================*/
 
-.login {
-  font-family: "Baloo Thambi 2", cursive;
-  text-align: center;
-  margin-top: 120px;
-  margin-left: 80px;
-  margin-right: 80px;
-  border-radius: 10px;
-  line-height: 1.8;
-  background-color: #417b5a;
-}
-
-.green {
-  color: green;
-}
-
-.main-articles {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
-
-.article-title {
-  background-color: #417b5a;
-  padding: 15px;
+nav a {
+  text-transform: uppercase;
   color: white;
-}
-
-.article-title:hover {
-  color: yellow;
-}
-
-a:link {
   text-decoration: none;
 }
 
-.topics {
-  text-align: center;
-  margin-top: 2em;
+nav li {
+  display: inline;
+  padding-right: 10px;
+  margin-right: 2em;
+  list-style: none;
+}
+/*=============== Navbar =========================*/
+
+/*=============== Topics =========================*/
+.topics-content ul {
+  margin: 0;
+  padding: 0;
+}
+
+.topics-content ul li a {
+  text-decoration: none;
+}
+
+.topics-content ul h2 {
+  background-color: #119da4;
+  margin-top: 0;
+  padding: 10px;
+  color: white;
+}
+
+.topics-content li {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
   border: 1px solid black;
-  margin-left: 180px;
-  margin-right: 180px;
-  padding: 0px;
+  margin: 20px 100px;
+  text-transform: uppercase;
 }
 
-.topics-container {
-  margin-top: 50px;
-}
+/*=============== Articles =========================*/
 
-.topics-header {
-  background-color: #417b5a;
-  color: white;
-}
+/*=============== Articles =========================*/
 
-.art-btn {
-  padding-top: 2px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 2px;
-  background-color: #4b3f72;
-  border-color: #4b3f72;
-  color: white;
-  border-radius: 10px;
-}
+/*=============== Topics =========================*/
 
-.art-btn:hover {
-  background-color: yellow;
-  border-color: yellow;
-  color: black;
-}
+/*=============== Topics =========================*/
 
-.user {
-  background-color: #417b5a;
-  font-size: 2vh;
-  margin-top: 100px;
-  margin-left: 100px;
-  margin-right: 100px;
-  border-radius: 15px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  text-align: center;
-}
+/*=============== Topics =========================*/
 
-.login-btn {
-  background-color: #4b3f72;
-  border-color: #4b3f72;
-  color: white;
-}
+/*=============== Topics =========================*/
 
-.login-btn:hover {
-  background-color: yellow;
-  border-color: yellow;
-  color: black;
-}
-
-.vote-btn {
-  background-color: #4b3f72;
-  border-color: #4b3f72;
-  color: white;
-  margin-right: 10px;
-  padding: 2px;
-  border-radius: 5px;
-}
-
-.vote-btn:hover {
-  background-color: yellow;
-  border-color: yellow;
-  color: black;
-}
-
-.comment-container {
-  text-align: center;
-  margin-top: 20px;
-}
-.comment {
-  height: 50px;
-  width: 400px;
-}
-
-.list-comments {
-  text-align: center;
-  margin-top: 20px;
-  background-color: #417b5a;
-  margin-left: 150px;
-  margin-right: 150px;
-  border-radius: 15px;
-}
-
-.comment-title {
-  background-color: #4b3f72;
-  margin-top: -40px;
-  border-radius: 10px;
-  color: white;
-}
-
-.comment-btn {
-  margin-top: 5px;
-  background-color: #4b3f72;
-  border-color: #4b3f72;
-  color: white;
-}
-
-.comment-btn:hover {
-  background-color: yellow;
-  border-color: yellow;
-  color: black;
-}
-
-.sort-comments {
-  text-align: center;
-}
-
-.comments-msg {
-  text-align: center;
-  margin-top: 3px;
-  font-weight: 900;
-}
-
-@media only screen and (max-width: 600px) {
-  .navbar {
-    align-items: center;
-    position: relative;
-    left: 0;
-    margin-left: -30px;
-    background-color: #e9d2c0;
-  }
-  .btn {
-    color: black;
-    text-align: center;
-    margin-left: 30px;
-  }
-  .main-header {
-    text-align: center;
-  }
-  .user {
-    text-align: center;
-    font-size: 1.8vh;
-    font-weight: bolder;
-  }
-}
-
-@media screen and (max-device-width: 450px) {
-  .navbar {
-    background-color: #417b5a;
-    width: 51.3vh;
-  }
-
-  .navbar h5 {
-    width: 100%vw;
-    text-align: center;
-    margin-left: 50px;
-  }
-
-  .btn {
-    color: white;
-    text-align: center;
-  }
-  .main-header {
-    text-align: center;
-    width: 12.7em;
-  }
-  .user {
-    text-align: center;
-    font-size: 1.8vh;
-    font-weight: bolder;
-  }
-  .topics {
-    text-align: center;
-    margin-top: 2em;
-    height: 100%;
-    width: 100%;
-    border: 1px solid black;
-  }
-  .topics-container {
-    margin-right: 245px;
-    margin-top: 100px;
-  }
-
-  .footer {
-    font-family: "Baloo Thambi 2", cursive;
-    text-align: center;
-    padding: 40px;
-    color: white;
-    width: 30.5em;
-    height: 100%vh;
-    margin-top: 228px;
-    background: #4b3f72;
-  }
-  .sub-header {
-    font-family: "Baloo Thambi 2", cursive;
-    background-color: #4b3f72;
-    width: 17.75em;
-    color: white;
-  }
-  .articles {
-    padding: 0px;
-    font-size: 1.1em;
-    width: 70%;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    text-align: center;
-    border: 1px solid #1f2041;
-    background-color: #e9d2c0;
-  }
-  .sorter {
-    margin-left: 230px;
-    margin-top: 20px;
-  }
-  .login {
-    width: 380px;
-  }
-  .list-comments {
-    width: 250px;
-  }
-  .comments-msg {
-    margin-left: 190px;
-  }
-  .sort-comments {
-    margin-left: 170px;
-  }
-}
+/*=============== Topics =========================*/

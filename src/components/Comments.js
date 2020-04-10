@@ -8,7 +8,7 @@ class Comments extends Component {
     comments: {},
     isLoading: true,
     sort: "",
-    hasError: false
+    hasError: false,
   };
 
   componentDidMount() {
@@ -19,18 +19,18 @@ class Comments extends Component {
           comments: data.comments,
           isLoading: false,
           sort: "",
-          hasError: false
+          hasError: false,
         });
       })
-      .catch(err => {
+      .catch((err) => {
         this.setState({
           hasError: { msg: err.response.data.msg, status: err.response.status },
-          isLoading: false
+          isLoading: false,
         });
       });
   }
 
-  handleSort = value => {
+  handleSort = (value) => {
     this.setState({ sort: value });
   };
 
@@ -42,30 +42,30 @@ class Comments extends Component {
         this.setState({
           comments: data.comments,
           isLoading: false,
-          sort: value
+          sort: value,
         });
       });
     }
   }
 
-  postComments = newComment => {
+  postComments = (newComment) => {
     const loggedInUser = this.props.loggedInUser;
     newComment.username = loggedInUser;
     const article_id = this.props.article_id;
-    postNewComment(article_id, newComment).then(res => {
-      this.setState(currentState => {
+    postNewComment(article_id, newComment).then((res) => {
+      this.setState((currentState) => {
         return { comments: [res.data.comment, ...currentState.comments] };
       });
     });
   };
 
-  handleDelete = comment_id => {
+  handleDelete = (comment_id) => {
     DeleteCommment(comment_id);
-    this.setState(currentState => {
+    this.setState((currentState) => {
       return {
         comments: currentState.comments.filter(
-          comment => comment.comment_id !== comment_id
-        )
+          (comment) => comment.comment_id !== comment_id
+        ),
       };
     });
   };
@@ -87,7 +87,7 @@ class Comments extends Component {
           YOU MUST BE LOGGED IN TO POST OR DELETE A COMMENT
         </p>
         <ul>
-          {comments.map(comment => {
+          {comments.map((comment) => {
             return (
               <li className="list-comments" key={comment.comment_id}>
                 <br />
@@ -101,7 +101,7 @@ class Comments extends Component {
                 {loggedInUser === comment.author && (
                   <button
                     className="comment-btn"
-                    onClick={e => this.handleDelete(comment.comment_id)}
+                    onClick={(e) => this.handleDelete(comment.comment_id)}
                   >
                     Delete Comment
                   </button>

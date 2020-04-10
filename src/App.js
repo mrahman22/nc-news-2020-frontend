@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import { Router } from "@reach/router";
-import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Header from "./components/Header";
 import Comments from "./components/Comments";
@@ -49,8 +48,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <span>
-          <Header />
-          <Nav loggedInUser={this.state.loggedInUser} />
+          <Header loggedInUser={this.state.loggedInUser} />
         </span>
         <Router>
           <LoginForm

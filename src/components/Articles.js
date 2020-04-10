@@ -12,7 +12,7 @@ class Articles extends React.Component {
     isLoading: true,
     hasError: false,
     sort: "",
-    order: ""
+    order: "",
   };
 
   componentDidMount() {
@@ -21,17 +21,17 @@ class Articles extends React.Component {
     });
   }
 
-  handleSort = value => {
+  handleSort = (value) => {
     this.setState({ sort: value });
   };
 
-  handleOrder = value => {
+  handleOrder = (value) => {
     fetchArticlesByOrder(value).then(({ data }) => {
       this.setState({
         articles: data.articles,
         isLoading: false,
         sort: this.state.sort,
-        order: value
+        order: value,
       });
     });
   };
@@ -43,7 +43,7 @@ class Articles extends React.Component {
         this.setState({
           articles: data.articles,
           isLoading: false,
-          sort: value
+          sort: value,
         });
       });
     }
@@ -58,7 +58,7 @@ class Articles extends React.Component {
         <SortArticles handleSort={this.handleSort} />
         <OrderByComponent handleOrder={this.handleOrder} />
         <ul className="main-art">
-          {this.state.articles.map(article => {
+          {this.state.articles.map((article) => {
             return (
               <li className="articles" key={article.article_id}>
                 <Link to={`/articles/${article.article_id}`}>

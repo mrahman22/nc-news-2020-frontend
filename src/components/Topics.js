@@ -5,7 +5,7 @@ import { Link } from "@reach/router";
 class Topics extends Component {
   state = {
     topics: {},
-    isLoading: true
+    isLoading: true,
   };
 
   componentDidMount() {
@@ -17,9 +17,9 @@ class Topics extends Component {
   render() {
     if (this.state.isLoading) return "....Loading";
     return (
-      <div className="main-topic-container">
-        <ul className="topics-container">
-          {this.state.topics.map(topic => {
+      <div className="topics-content">
+        <ul>
+          {this.state.topics.map((topic) => {
             return (
               <li className="topics" key={topic.slug}>
                 <Link to={`/topics/${topic.slug}`}>
