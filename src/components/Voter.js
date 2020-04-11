@@ -1,19 +1,30 @@
 import React from "react";
-import { patchCommentVotes } from "./api";
+import { patchVotes } from "./api";
 
-const Voter = ({ article_id }) => {
-  const incrementVotes = (e) => {
-    patchCommentVotes(article_id, 1);
-  };
-
-  const decrementVotes = (e) => {
-    patchCommentVotes(article_id, -1);
+const Voter = (props) => {
+  const updateVotes = (voteDirection) => {
+    const article_id = props.article_id;
+    patchVotes(article_id, voteDirection).then(({ data }) => {
+      props.addVotes(data.article);
+    });
   };
 
   return (
     <div>
-      <button onClick={incrementVotes}>LIKE</button>
-      <button onClick={decrementVotes}>DISLIKE</button>
+      <button
+        onClick={(e) => {
+          updateVotes(1);
+        }}
+      >
+        LIKE
+      </button>
+      <button
+        onClick={(e) => {
+          updateVotes(-1);
+        }}
+      >
+        DISLIKE
+      </button>
     </div>
   );
 };

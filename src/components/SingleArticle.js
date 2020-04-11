@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { fetchArticlesById } from "./api";
-import { patchCommentVotes } from "./api";
+// import { patchVotes } from "./api";
 import { Link } from "@reach/router";
+import Voter from "./Voter";
 
 class SingleArticle extends Component {
   state = {
@@ -24,18 +25,21 @@ class SingleArticle extends Component {
       });
   }
 
-  incrementVotes = (e) => {
-    const article_id = this.props.article_id;
-    patchCommentVotes(article_id, 1).then(({ data }) => {
-      this.setState({ selectedArticle: data.article, isLoading: false });
-    });
+  addVotes = (updatedArticle) => {
+    this.setState({ selectedArticle: updatedArticle });
   };
-  decrementVotes = (e) => {
-    const article_id = this.props.article_id;
-    patchCommentVotes(article_id, -1).then(({ data }) => {
-      this.setState({ selectedArticle: data.article, isLoading: false });
-    });
-  };
+  // incrementVotes = (e) => {
+  //   const article_id = this.props.article_id;
+  //   patchVotes(article_id, 1).then(({ data }) => {
+  //     this.setState({ selectedArticle: data.article, isLoading: false });
+  //   });
+  // };
+  // decrementVotes = (e) => {
+  //   const article_id = this.props.article_id;
+  //   patchVotes(article_id, -1).then(({ data }) => {
+  //     this.setState({ selectedArticle: data.article, isLoading: false });
+  //   });
+  // };
 
   render() {
     const { selectedArticle } = this.state;
@@ -62,12 +66,16 @@ class SingleArticle extends Component {
           <p>Comment Count: {selectedArticle.comment_count}</p>
         </Link>
         <p>Votes: {selectedArticle.votes}</p>
-        <button className="vote-btn" onClick={this.incrementVotes}>
+        <Voter
+          article_id={selectedArticle.article_id}
+          addVotes={this.addVotes}
+        />
+        {/* <button className="vote-btn" onClick={this.incrementVotes}>
           LIKE
         </button>
         <button className="vote-btn" onClick={this.decrementVotes}>
           DISLIKE
-        </button>
+        </button> */}
       </div>
     );
   }
