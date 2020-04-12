@@ -78,7 +78,7 @@ class Comments extends Component {
     if (this.state.hasError)
       return "Status: 404, msg: article_id does not exist";
     return (
-      <div>
+      <section className="all-comments">
         <br />
         <SortComments handleSort={this.handleSort} />
         <br />
@@ -110,7 +110,7 @@ class Comments extends Component {
             );
           })}
         </ul>
-      </div>
+      </section>
     );
   }
 }

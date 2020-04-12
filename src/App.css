@@ -54,16 +54,133 @@ nav li {
   text-transform: uppercase;
 }
 
-/*=============== Articles =========================*/
+/*=============== ArticlesByTopics =========================*/
 
-/*=============== Articles =========================*/
+.articlesBy-topics ul {
+  padding: 0;
+  margin: 0;
+}
 
-/*=============== Topics =========================*/
+.articlesBy-topics a {
+  text-decoration: none;
+}
 
-/*=============== Topics =========================*/
+.articlesBy-topics ul h5 {
+  background-color: #119da4;
+  margin-top: 0;
+  padding: 10px;
+  color: white;
+}
 
-/*=============== Topics =========================*/
+.articlesBy-topics li {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 20px 100px;
+  text-transform: uppercase;
+}
 
-/*=============== Topics =========================*/
+/*=============== ArticlesByTopics =========================*/
 
-/*=============== Topics =========================*/
+/*=============== All Articles =========================*/
+.all-articles ul {
+  padding: 0;
+  margin: 0;
+}
+
+.all-articles a {
+  text-decoration: none;
+}
+
+.all-articles li {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 20px 100px;
+  text-transform: uppercase;
+}
+
+.all-articles ul h5 {
+  background-color: #119da4;
+  margin-top: 0;
+  padding: 10px;
+  color: white;
+}
+/*=============== All Articles =========================*/
+
+/*=============== All Comments =========================*/
+
+.all-comments ul {
+  padding: 0;
+  margin: 0;
+}
+
+.all-comments li {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 20px 100px;
+  text-transform: uppercase;
+}
+
+.all-comments ul h3 {
+  background-color: #119da4;
+  margin-top: -18px;
+  padding: 15px;
+  color: white;
+}
+
+/*=============== All Comments =========================*/
+
+/*=============== Login =========================*/
+
+.login {
+  margin-top: 100px;
+  text-transform: uppercase;
+  background-color: #119da4;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 150px;
+  margin-right: 150px;
+  color: white;
+  border-radius: 15px;
+}
+
+.login ul {
+  padding: 0;
+  margin: 0;
+}
+
+.login ul li {
+  list-style: none;
+}
+
+.login input {
+  width: 150px;
+  align-self: center;
+}
+
+.login-btn {
+  border-radius: 15px;
+  margin-top: 3px;
+  background-color: #13505b;
+  border-color: #13505b;
+  color: white;
+  width: 70px;
+  align-self: center;
+}
+
+/*=============== Login =========================*/
+
+/*=============== Login =========================*/
+/*=============== Login =========================*/
+
+/*=============== Login =========================*/
+/*=============== Login =========================*/

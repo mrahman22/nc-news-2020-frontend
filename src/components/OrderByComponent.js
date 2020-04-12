@@ -1,10 +1,11 @@
 import React from "react";
 
-const OrderByComponent = props => {
+const OrderByComponent = (props) => {
   return (
     <div>
+      orderBy:
       <select
-        onChange={e => {
+        onChange={(e) => {
           props.handleOrder(e.target.value);
         }}
       >

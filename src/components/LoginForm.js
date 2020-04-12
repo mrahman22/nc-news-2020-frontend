@@ -3,14 +3,14 @@ import React, { Component } from "react";
 class LogInForm extends Component {
   state = {
     username: "",
-    loggedOut: false
+    loggedOut: false,
   };
 
   handleInput = (field, input) => {
     this.setState({ [field]: input });
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     const { username } = this.state;
     event.preventDefault();
     this.props.handleLogin(username);
@@ -21,12 +21,12 @@ class LogInForm extends Component {
     const loggedInUser = this.props.loggedInUser;
     console.log(loggedInUser);
     return (
-      <div className="login">
+      <section className="login">
         <p>You must be logged in to post or delete a comment</p>
         <input
           type="text"
           value={this.state.username}
-          onChange={e => {
+          onChange={(e) => {
             this.handleInput("username", e.target.value);
           }}
         />
@@ -50,7 +50,7 @@ class LogInForm extends Component {
         <button className="login-btn" onClick={this.props.handleLogout}>
           Log out
         </button>
-      </div>
+      </section>
     );
   }
 }

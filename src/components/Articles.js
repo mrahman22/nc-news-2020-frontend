@@ -53,9 +53,10 @@ class Articles extends React.Component {
     if (this.state.isLoading) return "....loading";
 
     return (
-      <div className="main-articles">
+      <div className="all-articles">
         <h1 className="sub-header">Articles</h1>
         <SortArticles handleSort={this.handleSort} />
+        <br />
         <OrderByComponent handleOrder={this.handleOrder} />
         <ul className="main-art">
           {this.state.articles.map((article) => {

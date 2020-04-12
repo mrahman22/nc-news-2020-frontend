@@ -8,7 +8,7 @@ class ArticlesByTopics extends Component {
   state = {
     articles: {},
     isLoading: true,
-    hasError: false
+    hasError: false,
   };
 
   componentDidMount() {
@@ -17,10 +17,10 @@ class ArticlesByTopics extends Component {
       .then(({ data }) => {
         this.setState({ articles: data.articles, isLoading: false });
       })
-      .catch(err => {
+      .catch((err) => {
         this.setState({
           hasError: { msg: err.response.data.msg, status: err.response.status },
-          isLoading: false
+          isLoading: false,
         });
       });
   }
@@ -28,9 +28,9 @@ class ArticlesByTopics extends Component {
     if (this.state.isLoading) return ".....Loading";
     if (this.state.hasError) return "Status: 404, msg: Topic does not exist";
     return (
-      <div>
+      <div className="articlesBy-topics">
         <ul>
-          {this.state.articles.map(article => {
+          {this.state.articles.map((article) => {
             return (
               <li className="articles" key={article.article_id}>
                 <Link to={`/articles/${article.article_id}`}>

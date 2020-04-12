@@ -17,7 +17,6 @@ class SingleArticle extends Component {
         this.setState({ selectedArticle: data.article, isLoading: false });
       })
       .catch((err) => {
-        console.dir(err, "article err");
         this.setState({
           hasError: { msg: err.response.data.msg, status: err.response.status },
           isLoading: false,
@@ -28,19 +27,6 @@ class SingleArticle extends Component {
   addVotes = (updatedArticle) => {
     this.setState({ selectedArticle: updatedArticle });
   };
-  // incrementVotes = (e) => {
-  //   const article_id = this.props.article_id;
-  //   patchVotes(article_id, 1).then(({ data }) => {
-  //     this.setState({ selectedArticle: data.article, isLoading: false });
-  //   });
-  // };
-  // decrementVotes = (e) => {
-  //   const article_id = this.props.article_id;
-  //   patchVotes(article_id, -1).then(({ data }) => {
-  //     this.setState({ selectedArticle: data.article, isLoading: false });
-  //   });
-  // };
-
   render() {
     const { selectedArticle } = this.state;
     if (this.state.isLoading) return "....Loading";
@@ -70,12 +56,6 @@ class SingleArticle extends Component {
           article_id={selectedArticle.article_id}
           addVotes={this.addVotes}
         />
-        {/* <button className="vote-btn" onClick={this.incrementVotes}>
-          LIKE
-        </button>
-        <button className="vote-btn" onClick={this.decrementVotes}>
-          DISLIKE
-        </button> */}
       </div>
     );
   }
