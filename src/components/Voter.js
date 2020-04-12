@@ -12,6 +12,7 @@ const Voter = (props) => {
   return (
     <div>
       <button
+        className="like-dislike-btn"
         onClick={(e) => {
           updateVotes(1);
         }}
@@ -19,6 +20,7 @@ const Voter = (props) => {
         LIKE
       </button>
       <button
+        className="like-dislike-btn"
         onClick={(e) => {
           updateVotes(-1);
         }}

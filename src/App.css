@@ -179,8 +179,56 @@ nav li {
 
 /*=============== Login =========================*/
 
-/*=============== Login =========================*/
-/*=============== Login =========================*/
+/*=============== single Article =========================*/
+
+.single-article {
+  margin-top: 30px;
+  color: white;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: #119da4;
+  justify-content: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.like-dislike-btn {
+  border-radius: 15px;
+  margin-top: 3px;
+  background-color: #13505b;
+  border-color: #13505b;
+  color: white;
+  width: 70px;
+  align-self: center;
+  margin-right: 3px;
+}
+
+/*=============== single Article =========================*/
+
+/*=============== user =========================*/
+
+.user ul li {
+  list-style: none;
+}
+
+.user p {
+  font-size: 13px;
+  text-align: justify;
+}
+
+.user {
+  margin-top: 100px;
+  background-color: #119da4;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.user ul {
+  padding: 0;
+  margin: 0;
+}
+
+/*=============== user =========================*/
 
 /*=============== Login =========================*/
 /*=============== Login =========================*/

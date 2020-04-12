@@ -31,9 +31,9 @@ export const fetchArticlesByTopics = (topic) => {
   return axios.get(`${baseUrl}/api/topics/${topic}`);
 };
 
-export const fetchUser = (username) => {
-  return axios.get(`${baseUrl}/api/users/${username}`);
-};
+// export const fetchUser = (username) => {
+//   return axios.get(`${baseUrl}/api/users/${username}`);
+// };
 
 export const fetchArticleByComments = (article_id, value) => {
   return axios.get(`${baseUrl}/api/articles/${article_id}/comments`, {

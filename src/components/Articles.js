@@ -71,9 +71,9 @@ class Articles extends React.Component {
                   </span>
                 </Link>
                 <span>
-                  <Link to={`/users/${article.author}`}>
-                    <button className="art-btn">user: {article.author}</button>
-                  </Link>
+                  {/* <Link to={`/users/${article.author}`}> */}
+                  <p>user: {article.author}</p>
+                  {/* </Link> */}
                 </span>
 
                 <p>Topic: {article.topic}</p>

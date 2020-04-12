@@ -32,7 +32,7 @@ class SingleArticle extends Component {
     if (this.state.isLoading) return "....Loading";
     if (this.state.hasError) return <p>status: 404, msg: Id not found!</p>;
     return (
-      <div className="single">
+      <section className="single-article">
         <h2>
           <span className="red">Title:</span> {selectedArticle.title}
         </h2>
@@ -56,7 +56,7 @@ class SingleArticle extends Component {
           article_id={selectedArticle.article_id}
           addVotes={this.addVotes}
         />
-      </div>
+      </section>
     );
   }
 }

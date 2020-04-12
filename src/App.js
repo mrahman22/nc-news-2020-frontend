@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Comments from "./components/Comments";
 import Articles from "./components/Articles";
 import SingleArticle from "./components/SingleArticle";
-import GetSingleUser from "./components/GetSingleUser";
+// import GetSingleUser from "./components/GetSingleUser";
 import LoginForm from "./components/LoginForm";
 import ErrorPage from "./components/ErrorPage";
 import ArticlesByTopics from "./components/ArticlesByTopics";
@@ -60,7 +60,7 @@ class App extends React.Component {
           <Home path="/" />
           <Articles path="/articles" />
           <SingleArticle path="articles/:article_id/" />
-          <GetSingleUser path="/users/:username" />
+          {/* <GetSingleUser path="/users/:username" /> */}
           <Comments
             path="/articles/:article_id/comments"
             loggedInUser={this.state.loggedInUser}
