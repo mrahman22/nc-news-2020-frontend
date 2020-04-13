@@ -245,7 +245,7 @@ nav li {
 
 /*=============== single Article =========================*/
 
-/*=============== Media Queries =========================*/
+/*=============== media queries login section =========================*/
 
 @media only screen and (max-width: 466px) {
   .login {
@@ -262,4 +262,62 @@ nav li {
   }
 }
 
-/*=============== Media Queries =========================*/
+/*=============== media queries login section =========================*/
+
+/*=============== media queries ========================*/
+
+@media only screen and (max-width: 405px) {
+  .topics-content li {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 40px 70px;
+    text-transform: uppercase;
+    background-color: #e9d2c0;
+  }
+  .articlesBy-topics li {
+    padding: 0;
+    background-color: #e9d2c0;
+    list-style: none;
+    line-height: 1em;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 20px 50px;
+    text-transform: uppercase;
+  }
+  .single-article {
+    margin-top: 30px;
+    color: white;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #417b5a;
+    justify-content: center;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .all-articles li {
+    padding: 0;
+    background-color: #e9d2c0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 20px 50px;
+    text-transform: uppercase;
+  }
+  .all-comments li {
+    padding: 0;
+    background-color: #417b5a;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 20px 50px;
+    text-transform: uppercase;
+  }
+}
+
+/*=============== media queries =========================*/

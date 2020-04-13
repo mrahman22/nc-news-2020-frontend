@@ -38,6 +38,7 @@ class ArticlesByTopics extends Component {
                     <h5 className="topics-header">
                       {article.title}
                       <br />
+                      <br />
                       <FontAwesomeIcon icon={faInfoCircle} />
                     </h5>
                   </span>
