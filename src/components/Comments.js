@@ -1,14 +1,27 @@
 import React, { Component } from "react";
-import { fetchArticleByComments, postNewComment, DeleteCommment } from "./api";
+import {
+  fetchArticleByComments,
+  postNewComment,
+  DeleteCommment,
+  fetchArticlesById,
+  //fetchArticles,
+} from "./api";
 import SortComments from "./SortComments";
 import PostNewCommForm from "./PostNewCommForm";
 
 class Comments extends Component {
   state = {
+    selectedArticle: [],
     comments: {},
     isLoading: true,
     sort: "",
     hasError: false,
+  };
+
+  getSingleArticle = () => {
+    fetchArticlesById(this.props.article_id).then(({ data }) => {
+      this.setState({ selectedArticle: data.article, isLoading: false });
+    });
   };
 
   componentDidMount() {

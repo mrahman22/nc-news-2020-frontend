@@ -38,6 +38,10 @@ nav li {
   margin-right: 2em;
   list-style: none;
 }
+
+.btn-unique {
+  color: yellow;
+}
 /*=============== Navbar =========================*/
 
 /*=============== Topics =========================*/
@@ -241,30 +245,21 @@ nav li {
 
 /*=============== single Article =========================*/
 
-/*=============== user =========================*/
+/*=============== Media Queries =========================*/
 
-.user ul li {
-  list-style: none;
+@media only screen and (max-width: 466px) {
+  .login {
+    margin-top: 100px;
+    text-transform: uppercase;
+    background-color: #417b5a;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+    margin-right: 70px;
+    color: white;
+    border-radius: 15px;
+  }
 }
 
-.user p {
-  font-size: 13px;
-  text-align: justify;
-}
-
-.user {
-  margin-top: 100px;
-  background-color: #119da4;
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
-.user ul {
-  padding: 0;
-  margin: 0;
-}
-
-/*=============== user =========================*/
-
-/*=============== Login =========================*/
-/*=============== Login =========================*/
+/*=============== Media Queries =========================*/
