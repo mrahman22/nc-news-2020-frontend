@@ -164,6 +164,23 @@ nav li {
   color: white;
 }
 
+.comment-btn {
+  border-radius: 15px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  background-color: #13505b;
+  border-color: #13505b;
+  color: white;
+  width: 130px;
+  align-self: center;
+}
+
+.comment-btn:hover {
+  background-color: yellow;
+  border-color: yellow;
+  color: red;
+}
+
 /*=============== All Comments =========================*/
 
 /*=============== Login =========================*/
