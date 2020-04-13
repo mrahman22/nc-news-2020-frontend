@@ -43,9 +43,7 @@ class ArticlesByTopics extends Component {
                   </span>
                 </Link>
                 <span>
-                  <Link to={`/users/${article.author}`}>
-                    <button className="art-btn">user: {article.author}</button>
-                  </Link>
+                  <p className="art-btn">user: {article.author}</p>
                 </span>
 
                 <p>Topic: {article.topic}</p>

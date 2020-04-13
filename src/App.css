@@ -5,8 +5,17 @@
 /*=============== Header =========================*/
 
 header {
-  background-color: #13505b;
+  background-color: #1f2041;
   color: white;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header a:hover {
+  color: yellow;
 }
 
 /*=============== Header =========================*/
@@ -17,6 +26,10 @@ nav a {
   text-transform: uppercase;
   color: white;
   text-decoration: none;
+}
+
+nav a:hover {
+  color: yellow;
 }
 
 nav li {
@@ -37,8 +50,12 @@ nav li {
   text-decoration: none;
 }
 
+.topics-content ul li h2:hover {
+  color: yellow;
+}
+
 .topics-content ul h2 {
-  background-color: #119da4;
+  background-color: #417b5a;
   margin-top: 0;
   padding: 10px;
   color: white;
@@ -52,6 +69,7 @@ nav li {
   border: 1px solid black;
   margin: 20px 100px;
   text-transform: uppercase;
+  background-color: #e9d2c0;
 }
 
 /*=============== ArticlesByTopics =========================*/
@@ -66,14 +84,18 @@ nav li {
 }
 
 .articlesBy-topics ul h5 {
-  background-color: #119da4;
+  background-color: #417b5a;
   margin-top: 0;
   padding: 10px;
   color: white;
 }
+.articlesBy-topics ul h5:hover {
+  color: yellow;
+}
 
 .articlesBy-topics li {
   padding: 0;
+  background-color: #e9d2c0;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -96,6 +118,7 @@ nav li {
 
 .all-articles li {
   padding: 0;
+  background-color: #e9d2c0;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -105,7 +128,7 @@ nav li {
 }
 
 .all-articles ul h5 {
-  background-color: #119da4;
+  background-color: #417b5a;
   margin-top: 0;
   padding: 10px;
   color: white;
@@ -121,6 +144,7 @@ nav li {
 
 .all-comments li {
   padding: 0;
+  background-color: #417b5a;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -130,7 +154,7 @@ nav li {
 }
 
 .all-comments ul h3 {
-  background-color: #119da4;
+  background-color: #1f2041;
   margin-top: -18px;
   padding: 15px;
   color: white;
@@ -143,7 +167,7 @@ nav li {
 .login {
   margin-top: 100px;
   text-transform: uppercase;
-  background-color: #119da4;
+  background-color: #417b5a;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -177,6 +201,12 @@ nav li {
   align-self: center;
 }
 
+.login-btn:hover {
+  background-color: yellow;
+  border-color: yellow;
+  color: red;
+}
+
 /*=============== Login =========================*/
 
 /*=============== single Article =========================*/
@@ -186,7 +216,7 @@ nav li {
   color: white;
   border-radius: 20px;
   padding: 5px;
-  background-color: #119da4;
+  background-color: #417b5a;
   justify-content: center;
   margin-left: 100px;
   margin-right: 100px;
@@ -201,6 +231,12 @@ nav li {
   width: 70px;
   align-self: center;
   margin-right: 3px;
+}
+
+.like-dislike-btn:hover {
+  color: red;
+  background-color: yellow;
+  border-color: yellow;
 }
 
 /*=============== single Article =========================*/
