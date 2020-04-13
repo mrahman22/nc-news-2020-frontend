@@ -266,7 +266,7 @@ nav li {
 
 /*=============== media queries ========================*/
 
-@media only screen and (max-width: 405px) {
+@media only screen and (max-width: 466px) {
   .topics-content li {
     padding: 0;
     list-style: none;
